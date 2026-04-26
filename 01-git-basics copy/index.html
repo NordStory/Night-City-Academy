@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>ARASAKA CORPORATION // Identity Gateway</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+		/>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="page-shell">
+			<header class="nav">
+				<div class="container nav-inner">
+					<a href="index.html" class="brand">
+						<span class="brand-mark" aria-hidden="true"></span>
+						<span class="brand-copy">
+							<span class="brand-name">ARASAKA CORPORATION</span>
+							<span class="brand-subtitle">Corporate Identity Systems</span>
+						</span>
+					</a>
+				</div>
+			</header>
+
+			<main class="auth-shell">
+				<div class="container auth-stack">
+					<section class="auth-card auth-card--centered" id="auth">
+						<div class="section-heading-group">
+							<p class="eyebrow">Identity Protocol</p>
+							<h1 class="section-heading">Corporate authorization portal</h1>
+							<p class="body">
+								Введите корпоративные учётные данные для доступа к защищённому
+								профилю сотрудника.
+							</p>
+						</div>
+
+						<form id="auth-form">
+							<div class="panel-header">
+								<p class="panel-label">Access Request</p>
+								<p class="status-badge status-badge--warning">SECURED</p>
+							</div>
+
+							<label class="field">
+								<span class="field-label">Corporate email</span>
+								<input
+									class="input"
+									type="email"
+									id="email"
+									name="email"
+									placeholder="operative@arasaka.corp"
+									required
+								/>
+							</label>
+
+							<label class="field">
+								<span class="field-label">Access token</span>
+								<input
+									class="input"
+									type="password"
+									id="password"
+									name="password"
+									placeholder="secure-2077"
+									required
+								/>
+							</label>
+
+							<button class="btn btn-primary btn-block" type="submit">
+								<i class="fas fa-right-to-bracket" aria-hidden="true"></i>
+								Request secure authorization
+							</button>
+
+							<div class="message-box" id="message-box" aria-live="polite"></div>
+						</form>
+					</section>
+
+					<section class="credential-card">
+						<div class="panel-header">
+							<p class="panel-label">Test Operator</p>
+							<p class="status-badge status-badge--critical">INTERNAL</p>
+						</div>
+
+						<dl class="credential-list">
+							<div>
+								<dt>Email</dt>
+								<dd><code id="test-operator-email">NULL</code></dd>
+							</div>
+							<div>
+								<dt>Password</dt>
+								<dd><code id="test-operator-password">NULL</code></dd>
+							</div>
+						</dl>
+					</section>
+				</div>
+			</main>
+		</div>
+
+		<script src="script.js"></script>
+	</body>
+</html>
